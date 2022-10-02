@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # changes directory to the directory holding this script
-cd ${0%/*}
+cd "${0%/*}" || exit
 
 python3 src/startserver.py &
 python3 src/startclient.py -player "Java" &
