@@ -143,7 +143,7 @@ class Messages(dict):
                             log("Msg '" + fld + "' key has value of type " + str(type(msg[fld])) +
                                 " but expected " + fldspec[0] + ": " + str(msg), "ERROR")
                             return False
-                        if fldspec[0] is 'str':
+                        if fldspec[0] == 'str':
                             if len(msg[fld]) < fldspec[1] or len(msg[fld]) > fldspec[2]:
                                 log("Msg '" + fld + "' key has a string value " + str(msg[fld]) +
                                     " with length out of range [" + str(fldspec[1]) + "," +
