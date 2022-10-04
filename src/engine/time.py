@@ -25,7 +25,7 @@ def set(serverTime):
 def perf_counter():
     """Returns float of current time in seconds.
 
-    This is is not clock time and is only relative to itself.
+    This is not clock time and is only relative to itself.
 
     Returns:
         counter (float): time in seconds.
