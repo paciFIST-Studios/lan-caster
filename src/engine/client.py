@@ -50,7 +50,7 @@ class Client(dict):
         2) Requesting that the server allow the player to join the game;
         3) Collecting user input and sending it to the server over the network;
         4) Receiving updates from the server and rendering them to the screen.
-        5) Performing any screen updates and animations that that are not
+        5) Performing any screen updates and animations that are not
            related to game logic, such as tile and character animations.
 
     Client attributes are stored in dictionary form (self['attribute_name'] rather
@@ -132,7 +132,7 @@ class Client(dict):
         log(f"Client Default IP: {engine.network.getDefaultIP()}")
 
         if self['connectName']:
-            self['clientIP'] = '0.0.0.0'  # ignore clinetIP if we are going to request server address from connector.
+            self['clientIP'] = '0.0.0.0'  # ignore clientIP if we are going to request server address from connector.
         try:
             self['socket'] = engine.network.Socket(
                 messages=engine.loaders.loadModule("messages", game=self['game']).Messages(),
@@ -148,7 +148,7 @@ class Client(dict):
         self['clientPort'] = self['socket'].sourcePort  # may have changed to a different available port.
         joinReply = False
         if self['connectName']:
-            # talk to connector for connetinfo msg
+            # talk to connector for connectinfo msg
             log(f"Asking connector for '{self['connectName']}' connection details.")
             connectorReply = False
             try:
